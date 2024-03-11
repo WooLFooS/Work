@@ -212,7 +212,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: TextField(
                   controller: passwordController,
-                  obscureText: true,
+                  obscureText: !visibility,
                   style: const TextStyle(color: Colors.white),
                   cursorColor: Colors.white,
                   decoration: InputDecoration(

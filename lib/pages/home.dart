@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
     AppBar appBar = AppBar(
       title: Text(title!),
       leading: IconButton(
-        onPressed: ()async {
+        onPressed: () async {
           await authService.logOut();
           Navigator.popAndPushNamed(context, '/');
         },
@@ -87,6 +87,15 @@ class _HomePageState extends State<HomePage> {
       ],
     );
     return Scaffold(
+      floatingActionButton: index == 2
+          ? FloatingActionButton(
+              onPressed: () => Navigator.popAndPushNamed(context, '/add_resumes'),
+              child: const Icon(
+                Icons.add,
+                color: Colors.white,
+              ),
+            )
+          : null,
       appBar: search ? appBarSearch : appBar,
       body: pages.elementAt(index),
       bottomNavigationBar: BottomNavigationBar(

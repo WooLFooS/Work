@@ -24,6 +24,7 @@ ThemeData dark = ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
+        foregroundColor: const MaterialStatePropertyAll(accentColor),
           backgroundColor: const MaterialStatePropertyAll(buttonColor),
           shape: MaterialStatePropertyAll(borderButton))),
   outlinedButtonTheme: OutlinedButtonThemeData(
